@@ -45,16 +45,16 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, THLabelStrokePosition) {
-	THLabelStrokePositionOutside,
-	THLabelStrokePositionCenter,
-	THLabelStrokePositionInside
+    THLabelStrokePositionOutside,
+    THLabelStrokePositionCenter,
+    THLabelStrokePositionInside
 };
 
 typedef NS_OPTIONS(NSUInteger, THLabelFadeTruncatingMode) {
-	THLabelFadeTruncatingModeNone = 0,
-	THLabelFadeTruncatingModeTail = 1 << 0,
-	THLabelFadeTruncatingModeHead = 1 << 1,
-	THLabelFadeTruncatingModeHeadAndTail = THLabelFadeTruncatingModeHead | THLabelFadeTruncatingModeTail
+    THLabelFadeTruncatingModeNone = 0,
+    THLabelFadeTruncatingModeTail = 1 << 0,
+    THLabelFadeTruncatingModeHead = 1 << 1,
+    THLabelFadeTruncatingModeHeadAndTail = THLabelFadeTruncatingModeHead | THLabelFadeTruncatingModeTail
 };
 
 @interface THLabel : UILabel
@@ -82,5 +82,7 @@ typedef NS_OPTIONS(NSUInteger, THLabelFadeTruncatingMode) {
 
 @property (nonatomic, assign) UIEdgeInsets textInsets;
 @property (nonatomic, assign) BOOL automaticallyAdjustTextInsets;
+
+- (void)drawRectWithStroke:(CGRect)rect;
 
 @end
